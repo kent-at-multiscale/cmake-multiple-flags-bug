@@ -36,7 +36,7 @@ class CMakeMultipleFlagsBug(conans.ConanFile):
         self.cpp_info.libdirs = []  # Directories where libraries can be found
         self.cpp_info.resdirs = []  # Directories where resources, data, etc can be found
         self.cpp_info.bindirs = []  # Directories where executables and shared libs can be found
-        self.cpp_info.defines = ['THREAD_SAFE=YES', 'THREAD_SAFE=NO']  # preprocessor definitions
+        self.cpp_info.defines = ['THREAD_SAFE=YES', 'THREAD_SAFE_=NO']  # preprocessor definitions
         self.cpp_info.cflags = ['-Wall', '-Werror']  # pure C flags
         self.cpp_info.cppflags = ['-pthread', '-Dplacebo', '-Dfoo']  # C++ compilation flags
         self.cpp_info.sharedlinkflags = ['-Wl,-rpath,@loader_path/', '-Wl,-rpath,\\$$ORIGIN/']  # linker flags
